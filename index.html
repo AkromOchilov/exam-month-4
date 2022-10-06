@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- Modal -->
+		<div class="modal">
+			<div class="modal__body">
+				<div class="modal__inner">
+					<form class="modal__form">
+						<label class="modal__label" for="modal-select"
+							>Siz qanday muhimlik darajasiga
+							o'zgartirmoqchisiz?</label
+						>
+						<select name="modal-select" class="modal__select">
+							<option value="" selected disabled>
+								Choose the priority
+							</option>
+							<option value="high">High</option>
+							<option value="normal">Normal</option>
+							<option value="low">Low</option>
+						</select>
+						<div class="modal__btns">
+							<button class="modal__btn cancel">Cancel</button>
+							<button class="modal__btn save">Save</button>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div class="curtain" data-close="close"></div>
+		</div>
+		<!-- Modal end -->
+		<div class="wrapper">
+			<!-- Wrapper left -->
+			<div class="wrapper__left">
+				<div class="logo">
+					<a href="./index.html" class="logo__link">
+						<img
+							src="./images/twitter.svg"
+							alt="Logo img"
+							class="logo__pic"
+							width="32"
+							height="32"
+						/>
+					</a>
+					<h2 class="logo__name">Dashboard Kit</h2>
+				</div>
+
+				<ul class="menu__list menu">
+					<li class="menu__item">Overview</li>
+					<li class="menu__item">Tickets</li>
+					<li class="menu__item">Ideas</li>
+					<li class="menu__item">Contacts</li>
+					<li class="menu__item">Agents</li>
+					<li class="menu__item">Articles</li>
+					<li class="menu__item">Settings</li>
+					<li class="menu__item">Subscription</li>
+				</ul>
+			</div>
+			<!-- Wrapper left end -->
+
+			<!-- Wrapper right!!! -->
+			<div class="wrapper__right">
+				<header class="header">
+					<h1 class="header__title">Tickets</h1>
+					<div class="header__right">
+						<div class="header__functions">
+							<button class="header__btn search__btn">
+								<img
+									src="./images/search.svg"
+									alt="Search icon"
+									class="search__img"
+									width="16"
+									height="16"
+								/>
+							</button>
+							<button class="header__btn noti__btn">
+								<img
+									src="./images/notifications.svg"
+									alt="Notifications icon"
+									class="noti__img"
+									width="16"
+									height="16"
+								/>
+							</button>
+						</div>
+
+						<div class="header__user">
+							<span class="header__user--name"
+								>Jones Ferdinand</span
+							>
+							<img
+								src="./images/profile.png"
+								alt="User image"
+								class="header__user--img"
+								width="44"
+								height="44"
+							/>
+						</div>
+					</div>
+				</header>
+
+				<div class="content__wrapper">
+					<div class="content__header">
+						<h3 class="content__title">All tickets</h3>
+						<div class="content__functions">
+							<select class="content__btn sort">
+								<option value="sort">Sort</option>
+								<option value="a-z">A -> Z</option>
+								<option value="z-a">Z -> A</option>
+							</select>
+							<select class="content__btn filter">
+								<option value="filter">Filter</option>
+								<option value="high">High</option>
+								<option value="normal">Normal</option>
+								<option value="low">Low</option>
+							</select>
+						</div>
+					</div>
+					<!-- TABLE -->
+					<div class="table">
+						<div class="table__header">
+							<h3 class="table__title">Ticket details</h3>
+							<h3 class="table__title">Customer name</h3>
+							<h3 class="table__title">Date</h3>
+							<h3 class="table__title">Priority</h3>
+						</div>
+
+						<!-- CONTENT -->
+						<div class="main"></div>
+						<template id="content-template">
+							<div class="comment__div">
+								<div class="comment">
+									<img
+										src="./images/profile.png"
+										alt="Profile image"
+										class="comment__user"
+										width="44"
+										height="44"
+									/>
+									<div class="comment__status">
+										<span class="common__style--text"
+											>Contact Email not Linked</span
+										>
+										<span class="common__style--time"
+											>Updated 1 day ago</span
+										>
+									</div>
+								</div>
+								<div class="comment__author">
+									<span class="common__style--text"
+										>Jon Stones</span
+									>
+									<time class="common__style--time"
+										>on 24.05.2019</time
+									>
+								</div>
+								<div class="comment__date">
+									<time class="common__style--text"
+										>May 26, 2019</time
+									>
+									<time class="common__style--time"
+										>6:30 PM</time
+									>
+								</div>
+								<div class="comment__priority">
+									<span
+										class="comment__priority--status"
+									></span>
+									<a href="#" class="comment__more">
+										<img
+											src="./images/more.svg"
+											alt="More"
+											class="comment__more--img"
+											width="24"
+											height="24"
+										/>
+									</a>
+								</div>
+							</div>
+						</template>
+					</div>
+					<!-- Content end -->
+					<!-- TABLE end -->
+				</div>
+			</div>
+			<!-- Wrapper right end -->
+		</div>
+		<script type="module" src="./js/main.js"></script>
+	</body>
+</html>
